@@ -5,19 +5,19 @@ export default function DashboardPage() {
   const stats = [
     {
       title: "Bookings",
-      value: "128",
+      value: "24",
     },
     {
       title: "Properties",
-      value: "12",
+      value: "8",
     },
     {
       title: "Reviews",
-      value: "356",
+      value: "4.8★",
     },
     {
       title: "AI Plans",
-      value: "89",
+      value: "12",
     },
   ];
 
@@ -25,13 +25,13 @@ export default function DashboardPage() {
     <>
       <Navbar />
 
-      <main className="min-h-screen bg-stone-100 px-4 py-8 transition-colors duration-200 dark:bg-gray-950">
+      <main className="min-h-screen bg-stone-100 px-4 py-4 md:px-6 md:py-8 transition-colors duration-200 dark:bg-gray-950">
         
         <div className="mx-auto max-w-7xl">
 
           {/* Heading */}
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold text-green-700 dark:text-green-400">
+          <div className="mb-4 md:mb-8">
+            <h1 className="text-2xl md:text-4xl font-bold text-green-700 dark:text-green-400">
               Dashboard
             </h1>
 
@@ -41,17 +41,17 @@ export default function DashboardPage() {
           </div>
 
           {/* Stats Grid */}
-          <section className="mb-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <section className="mb-6 grid grid-cols-2 gap-3 md:gap-4 lg:grid-cols-4">
             {stats.map((item) => (
               <div
                 key={item.title}
-                className="rounded-2xl bg-stone-200 p-6 shadow-md transition hover:shadow-xl dark:bg-gray-900"
+                className="rounded-xl bg-stone-200 p-3 md:p-4 shadow-sm transition hover:shadow-md dark:bg-gray-900"
               >
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400">
                   {item.title}
                 </p>
 
-                <h2 className="mt-2 text-3xl font-bold">
+                <h2 className="mt-1 text-xl md:text-2xl font-bold">
                   {item.value}
                 </h2>
               </div>
@@ -63,7 +63,7 @@ export default function DashboardPage() {
           <section className="mb-10">
             <div className="overflow-hidden rounded-2xl bg-stone-200 shadow-md dark:bg-gray-900">
               
-              <div className="border-b p-6 dark:border-gray-700">
+              <div className="border-b p-4 md:p-6 dark:border-gray-700">
                 <h2 className="text-2xl font-semibold">
                   Nearby Homestays
                 </h2>
@@ -74,7 +74,7 @@ export default function DashboardPage() {
               </div>
 
               {/* Map Placeholder */}
-              <div className="relative flex h-72 items-center justify-center bg-gradient-to-br from-green-200 to-emerald-100 dark:from-green-950 dark:to-gray-950">
+              <div className="relative flex h-48 md:h-72 items-center justify-center bg-gradient-to-br from-green-200 to-emerald-100 dark:from-green-950 dark:to-gray-950">
                 
                 <div className="absolute inset-0 opacity-20">
                   <div className="h-full w-full bg-[radial-gradient(circle,_gray_1px,_transparent_1px)] bg-[size:30px_30px]" />
@@ -100,13 +100,11 @@ export default function DashboardPage() {
               </div>
 
               {/* Sample Homestays */}
-              <div className="grid gap-4 p-6 md:grid-cols-2 lg:grid-cols-4">
+              <div className="grid gap-3 p-4 md:p-6 md:grid-cols-2 lg:grid-cols-4">
 
                 {[
                   "Chopta View Stay",
-                  "Tungnath Eco Lodge",
-                  "Valley Retreat",
-                  "Deoria Tal Homestay",
+                  "Tungnath Eco Lodge"
                 ].map((stay) => (
                   <div
                     key={stay}
@@ -131,7 +129,7 @@ export default function DashboardPage() {
           <section className="grid gap-6 lg:grid-cols-3">
 
             {/* Recent Bookings */}
-            <div className="rounded-2xl bg-stone-200 p-6 shadow-md dark:bg-gray-900 lg:col-span-2">
+            <div cclassName="rounded-2xl bg-stone-200 p-4 md:p-6 shadow-md dark:bg-gray-900 lg:col-span-2">
               <h2 className="mb-4 text-2xl font-semibold">
                 Recent Bookings
               </h2>
@@ -140,8 +138,7 @@ export default function DashboardPage() {
 
                 {[
                   "Chopta Eco Stay",
-                  "Tungnath View Homestay",
-                  "Valley Retreat",
+                  "Tungnath View Homestay"
                 ].map((booking) => (
                   <div
                     key={booking}
@@ -166,7 +163,7 @@ export default function DashboardPage() {
             </div>
 
             {/* Quick Actions */}
-            <div className="rounded-2xl bg-stone-200 p-6 shadow-md dark:bg-gray-900">
+            <div cclassName="rounded-2xl bg-stone-200 p-4 md:p-6 shadow-md dark:bg-gray-900">
               <h2 className="mb-4 text-2xl font-semibold">
                 Quick Actions
               </h2>

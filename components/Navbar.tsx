@@ -6,7 +6,7 @@ import { UserCircle } from "lucide-react";
 export default function Navbar() {
   return (
     <nav className="w-full border-b bg-stone-200 shadow-sm dark:bg-gray-900 dark:border-gray-800 transition-colors">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6 py-3 md:py-4">
         
         {/* Logo */}
         <Link
