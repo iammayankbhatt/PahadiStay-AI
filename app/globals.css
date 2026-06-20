@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* ADD THIS LINE to enable class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
 html,
 body {
   margin: 0;
@@ -12,6 +15,11 @@ body {
 }
 
 body {
-  background: #f8fafc;
+  background: rgb(215, 209, 209);
   color: #111827;
+}
+
+.dark body {
+  background: #111827;
+  color: rgb(41, 91, 15);
 }

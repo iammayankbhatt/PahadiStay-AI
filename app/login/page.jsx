@@ -7,7 +7,7 @@ export default function LoginPage() {
       <Navbar />
 
       <main className="min-h-screen bg-gray-50 px-6 py-16">
-        <div className="mx-auto max-w-md rounded-2xl bg-white p-8 shadow-lg">
+        <div className="mx-auto max-w-md rounded-2xl bg-stone-200 p-8 shadow-lg">
           <h1 className="mb-4 text-3xl font-bold text-green-700">
             Login
           </h1>

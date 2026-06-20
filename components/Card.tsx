@@ -14,7 +14,7 @@ export default function Card({
   buttonText,
 }: CardProps) {
   return (
-    <div className="overflow-hidden rounded-2xl border bg-white shadow-md transition hover:-translate-y-2 hover:shadow-xl">
+    <div className="overflow-hidden rounded-2xl border bg-stone-200 shadow-md transition hover:-translate-y-2 hover:shadow-xl">
       
       <Image
         src={image}

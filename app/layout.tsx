@@ -1,9 +1,11 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "PahadiStay AI",
-  description: "Smart Homestay Discovery, Booking & Travel Planning Platform",
+  description:
+    "Smart Homestay Discovery, Booking & Travel Planning Platform",
 };
 
 export default function RootLayout({
@@ -12,9 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
